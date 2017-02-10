@@ -1,0 +1,54 @@
+/* constructor: */
+{
+    "renderer": {},
+    "settings": {
+        "lock": true,
+        "centerHorizontalOnly": false,
+        "startingZIndex": 5,
+        "ignoreTransitions": false,
+        "centerVerticalOnly": false,
+        "enableEscClose": true,
+        "userId": 2,
+        "model": {
+            "api": {
+                "isRequesting": false,
+                "usersArr": [],
+                "http": {
+                    "activeRequestCount": 0,
+                    "isRequesting": false,
+                    "isConfigured": false,
+                    "baseUrl": "",
+                    "defaults": null,
+                    "interceptors": []
+                }
+            },
+            "ea": {
+                "eventLookup": {},
+                "messageHandlers": [
+                    {},
+                    {}
+                ]
+            },
+            "firstName": "David",
+            "lastName": "",
+            "emailAddress": "",
+            "city": "",
+            "country": "",
+            "user": null,
+            "info": {
+                "id": 6,
+                "isMember": false,
+                "systemRoles": 1,
+                "firstName": "David",
+                "lastName": "Bowie",
+                "emailAddress": "david@bowie.com"
+            },
+            "editType": null,
+            "originalUser": null
+        }
+    },
+    "result": {
+        "isFulfilled": false,
+        "isRejected": false
+    }
+}

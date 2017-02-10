@@ -1,0 +1,33 @@
+<template>
+  <require from="../widgets/inputs/form-input"></require>
+
+  <div class="hdr-wrap">
+    <h1 class="hdr-inline">${title}<span class="html-file-name">(user-edit.html)</span></h1>
+  </div>
+
+  <!--<p>id: ${user.id}</p>
+  <p>originalUser.firstName: ${originalUser.firstName}</p>
+  <p>user.firstName: ${user.firstName}</p>-->
+
+  <div class="panel panel-bp margin-x-0 has-button-bar">
+    <div class="panel-body row">
+      
+      <form role="form" class="form-horizontal">
+
+        <form-input name="firstName" model.two-way="user.firstName"></form-input>
+        <form-input name="lastName" model.two-way="user.lastName" inp-label="Last Name"></form-input>
+        <form-input name="emailAddress" model.two-way="user.emailAddress" inp-label="emailAddress"></form-input>
+        <form-input name="personalNumber" model.two-way="user.personalNumber" inp-label="Telephone"></form-input>
+
+      </form>
+
+    </div>
+  </div>
+
+  <div bind.if="user">
+    <div class="button-bar col-md-12 padding-x-0 text-align-right">
+      <button class="btn btn-success" click.delegate="save()" disabled.bind="!canSave">Save</button>
+    </div>
+  </div>
+
+</template>

@@ -1,0 +1,17 @@
+  {
+    "id":6,
+    "isMember":false,
+    "firstName":"David",
+    "lastName":"Bowie",
+    "emailAddress":"david@bowie.com",
+    "systemRoles": {
+      "flags": [
+        {
+          "value": 3,
+          "name": "Admin"
+        }
+      ],
+      "value": 3,
+      "name": "Admin"
+    }
+  }

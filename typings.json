@@ -1,0 +1,18 @@
+{
+  "name": "user-manager-3",
+  "dependencies": {
+    "aurelia-dialog": "github:aurelia/dialog"
+  },
+  "globalDevDependencies": {
+    "angular-protractor": "registry:dt/angular-protractor#1.5.0+20160425143459",
+    "jasmine": "registry:dt/jasmine#2.2.0+20160505161446",
+    "node": "registry:dt/node",
+    "selenium-webdriver": "registry:dt/selenium-webdriver#2.44.0+20160317120654"
+  },
+  "globalDependencies": {
+    "jquery": "registry:dt/jquery#1.10.0+20170104155652",
+    "moment": "registry:dt/moment#2.11.1+20161010105546",
+    "moment-timezone": "registry:dt/moment-timezone#0.2.5+20161208060822",
+    "select2": "registry:dt/select2#4.0.1+20161124150542"
+  }
+}

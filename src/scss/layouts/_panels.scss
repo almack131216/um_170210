@@ -1,0 +1,23 @@
+/* _panels.scss */
+
+.panel {
+    @include box-shadow(false);
+
+    &.panel-bp {
+        background: $bp_color-lightgray-2;
+        border:0px;
+        border-bottom:3px solid $bp_color-green-1;
+    }
+
+    &.has-button-bar {
+        margin-bottom:0px;
+    }
+}
+
+.panel-body {
+
+}
+
+.panel-heading {
+    
+}

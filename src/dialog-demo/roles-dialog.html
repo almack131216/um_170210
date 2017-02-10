@@ -1,0 +1,42 @@
+<template>
+
+    <require from="../views/widgets/inputs/form-checkbox"></require>
+    <require from="../views/widgets/inputs/form-select"></require>
+    <require from="../views/widgets/inputs/form-filter-role"></require>
+
+    <ai-dialog>
+        <ai-dialog-header>
+            <h2>${title}</h2>
+        </ai-dialog-header>
+
+        <ai-dialog-body>
+            <table class="table border-none half-n-half">
+                <tbody>
+                <tr>
+                    <td><label>ID:</label> ${userRole.id}</td>
+                    <td><label>Name:</label> ${userRole.firstName} ${userRole.lastName}</td>
+                </tr>
+                <tr>
+                    <td>
+                        <form-checkbox inp-name="userRole_isMember"
+                            inp-label="MRT Member"                            
+                            model.two-way="userRole.isMember"
+                            init-selected.two-way="userRole.isMember"
+                            input-only="true"></form-checkbox>
+                    </td>
+                    <td class="xxx_wrap-role">
+                        <form-filter-role name="userRole_system_role" model.two-way="userRole.systemRoles.value" options.bind="lkp_role" changed.two-way="userRole.systemRoles.value"
+                            init-selected.two-way="userRole.systemRoles.value"></form-filter-role>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+
+        </ai-dialog-body>
+
+        <ai-dialog-footer>
+            <button class="btn btn-primary" click.trigger="yes()">Yes</button>
+            <button class="btn btn-default pull-left" click.trigger="cancel()">Cancel</button>
+        </ai-dialog-footer>
+    </ai-dialog>
+</template>

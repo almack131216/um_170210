@@ -1,0 +1,23 @@
+<template>
+  <require from="../widgets/user-list"></require>
+  <require from="../widgets/user-edit"></require>
+  <require from="./user-add"></require>
+
+  <!--<div class="col-md-12">
+    <h1>${title}<span class="html-file-name">(user-selected.html)</span></h1>
+    <hr>
+  </div>-->
+
+  <div if.bind="!editType">
+    <user-list class="col-xs-12 col-md-8"></user-list>
+
+    <div class="col-xs-12 col-md-4">
+      <user-edit user.bind="user"></user-edit>
+    </div>
+  </div>
+
+  <div if.bind="user && editType=='edit'" class="col-xs-12">
+    <user-add user.bind="user"></user-add>
+  </div>
+
+</template>

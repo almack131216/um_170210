@@ -1,0 +1,61 @@
+<template>
+  <require from="../widgets/inputs/form-input"></require>
+  <require from="../widgets/inputs/form-select"></require>
+  <require from="../widgets/inputs/form-radio"></require>
+  <require from="../widgets/inputs/form-checkbox"></require>
+  <require from="../widgets/form-user-full-body"></require>
+  <require from="../widgets/btn-xc-all"></require>
+
+  <div class="btn-group btn-edit-avatar pull-right" role="group" aria-label="user options">
+
+    <div class="btn-group" role="group">
+      <button class="btn btn-default dropdown-toggle btn-i" type="button"
+        id="dropdownMenu1"
+        data-toggle="dropdown"
+        aria-haspopup="true"
+        aria-expanded="true">
+          <i class="fa fa-pencil"></i>
+          David Bowie
+          <span class="caret"></span>
+      </button>
+      <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+        <li><a href="#"><i class="fa fa-fw fa-pencil"></i> Change Username</a></li>
+        <li><a href="#"><i class="fa fa-fw fa-photo"></i> Change Avatar</a></li>
+      </ul>
+    </div>
+
+    <a class="btn btn-default avatar">
+      <img src="/src/img/low.jpg" alt="tmp me">
+    </a>
+
+  </div>
+
+
+  <h1 class="display-inline-block">${title}</h1>
+  <btn-xc-all wrapper-id="user-panels"></btn-xc-all>
+
+  <form role="form" class="form-horizontal" id="user-panels">
+<!--cust-xc-expanded="true"-->
+    <form-user-full-body user.bind="user" cust-title="User" cust-body="user-details" cust-xc="true" cust-xc-id="xc_user" cust-xc-expanded="true"></form-user-full-body>
+
+    <form-user-full-body user.bind="user" cust-title="MRT Role Information" cust-body="user-mrt-role" cust-xc="true" cust-xc-id="xc_mrt-role"></form-user-full-body>
+
+    <form-user-full-body user.bind="user" cust-title="Languages" cust-body="user-languages" cust-xc="true" cust-xc-id="xc_languages"></form-user-full-body>
+
+    <form-user-full-body user.bind="user" cust-title="Passport Information" cust-body="user-passport" cust-xc="true" cust-xc-id="xc_passport"></form-user-full-body>
+
+    <form-user-full-body user.bind="user" cust-title="Visa Information" cust-body="user-visa" cust-xc="true" cust-xc-id="xc_visa"></form-user-full-body>
+
+    <form-user-full-body user.bind="user" cust-title="Training" cust-body="user-training" cust-xc="true" cust-xc-id="xc_training"></form-user-full-body>
+
+    <!--<form-user-full-body user.bind="user" cust-title="TWIC Information" cust-body="user-twic" cust-xc="true" cust-xc-id="xc_twic"></form-user-full-body>-->
+
+    <form-user-full-body if.bind="user.permissions.accessConfidentialFields" cust-icon="fa-exclamation-triangle" user.bind="user" cust-title="Confidential Information" cust-body="user-confidential" cust-xc="true" cust-xc-id="xc_confidential"></form-user-full-body>
+
+  </form>
+
+  <div class="button-bar col-md-12 padding-x-0 text-align-right">
+      <button class="btn btn-success" click.delegate="save()" disabled.bind="!canSave">Save</button>
+    </div>
+
+</template>
